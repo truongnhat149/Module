@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>A</title>
+    </head>
+    <body>
+ 
+     <button type="button" onclick="showMessage();">Click Me</button>
+        
+    </body>
+</html>
+<!-- bt1 Sử dụng hàm alert-->
+<script>
+    function showMessage(){
+        alert('Xin CHao');
+    }
+</script>
+<!-- bt 2HIển thị kết quả sử dụng thẻ HTML-->
+<div id="messageDiv"></div>
+<script>
+    function showMessage(){
+        document.getElementById('messageDiv').innerHTML = 'XInchao';
+    }
+</script>
+<script >
+    function showMessage(){
+      document.write('XInchao');
+       }
+</script>
+<!-- bt 3 hien thi ket qua documentwrite -->
+<!-- bt4 sd ham console.log -->
+<script>
+function showMessage(){
+    console.log('Xinchao');
+}   
+</script>
