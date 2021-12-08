@@ -1,29 +1,57 @@
 <!DOctype HTML>
+<html>
 
+<head>
     <title>
         so thich cua ban
     </title>
- <h1>Sở thích của bạn</h1>
- <p>Họ và tên <input type="Textbox"  name="yourname"></p>
-<p>Email <input type="TextBox" name="email"></p>
-<p><ul>Sở Thích <INput type="checkbox" name="hobby">Thể thao</ul>
-    <li><input type="checkbox" name="hobby">Âm nhạc</li>
-    <li><INput type="checkbox" name="hobby">Đọc sách</li>
-        <li><input type="checkbox" name="hobby">Chơi Game</li>
-        <li><Input type="checkbox" Name="hobby"> Du lịch</li>
-            <br><Input type="submit" Gửi thông tin>
-                <INput type="reset" Nhập lại></p>
-                    <!--đây là btap p1 tạo form đơn giản-->
-  
- <form>
-   <h1>Đăng ký học viên</h1>  
-   <p>Họ và tên <input type="textbox" name="yournam"></p>
-   <p>Ngày sinh <input type="textbox" name="date"></p>
-   <p>Giới tính <input type="checkbox" name="hobby">nam><input type="checkbox" name="hobby">Nữ>
-    <p>Địa chỉ <input type="textbox" name="address">
-<p>Lớp <input type="number"></p>
-<p>Email <input type="email"> 
-    <p>Điện thoại <input type="text">
- </form>    
- <!--đây là forrm đơn giản-->    
- <!--có gì sai sót mong được mọi người xem và chỉnh sửa ạ-->           
+</head>
+
+<body>
+    <form action="taoformdgian.html">
+        <table>
+            <caption>Your Favorite</caption>
+            <tr>
+                <th colspan="4" bgcolor="orange">Sở thích của bạn</th>
+            </tr>
+            <tr >
+                <td style="color: blue;">Full Name <input type="text" name="fullname" required></td>
+            </tr>
+            <tr>
+                <td style="color: blue;">Email
+                    <input type="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td style="color: blue;">Sở thích</td>
+                <td>
+                    <input type="checkbox">Thể Thao
+                </td>
+                <td><input type="checkbox">Âm nhạc</td>
+                <td>
+                    <input type="checkbox">Đọc sách
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox">Lướt Web</td>
+                <td>
+                    <input type="checkbox">Chơi Game</td>
+                <td>
+                    <input type="checkbox">Điện Ảnh</td>
+            </tr>
+            <tr>
+                <td></td>
+
+                <td><input type="checkbox">Du lịch</td>
+            </tr>
+
+        </table>
+        <input type="submit" value="Gửi Thông Tin">
+        <input type="reset" value="Nhập lại">
+    </form>
+
+</body>
+
+</html>
