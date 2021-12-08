@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>currency converter app</title>
+    </head>
+    <body>
+        <form action="">
+            <label>Amount<br></label>
+            <input type="text" id="dauvao"><br>
+            <label> From Currency </label><br>
+            <select id="ct1"> 
+                <br>
+                <option value="VN" >
+                   VN
+                </option >
+                <option value="USD" >
+                    USD
+                </option>
+            </select><br>
+            <label> To Currency </label><br>
+            <select id="ct2">
+                <option value="VN" >
+                    VN
+                </option>
+                <option value="USD" >
+                    USD
+                </option>
+            </select><br>
+           <button onclick="chuyentien()">convert</button>
+        </form>
+
+    </body>
+    <script>
+        function chuyentien() {
+            let giatrivao = document.getElementById('dauvao').value;
+            let ct1 = document.getElementById('ct1').value;
+            let ct2 = document.getElementById('ct2').value;
+            
+          
+            if (ct1 == "VN" && ct2 == "USD" ) {
+                alert(giatrivao/23000);
+            } else {
+                alert('Moi chon lai gia tri')
+            }
+            if (ct1 == "USD" && ct2 == "VN"){
+                alert(giatrivao*23000);
+            }
+            /* currency conveter app*/
+        }
+    </script>
+</html>

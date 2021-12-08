@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <form action="#">
+        <input type="number" id="o1" placeholder="input value1">
+        <input type="number" id="o2" placeholder="input value2"><br><br>
+        <button onclick="cong()">Addition(+)</button>
+        <button onclick="tru()">Subtration(-)</button>
+        <button onclick="nhan()">Multiplication(x)</button>
+        <button onclick="chia()">Division(/)</button>
+        <p id="result">Result Division: </p>
+
+    </form>
+
+</body>
+
+
+
+<script>
+    function cong() {
+        let giatri1 = Number(document.getElementById("o1").value);
+        let giatri2 = Number(document.getElementById("o2").value);
+        let tong = (giatri1 + giatri2);
+        document.getElementById("result").innerHTML += tong;
+    }
+    function tru() {
+        let giatri1 = Number(document.getElementById("o1").value);
+        let giatri2 = Number(document.getElementById("o2").value);
+        let tru = (giatri1 - giatri2);
+        document.getElementById("result").innerHTML += tru;
+    }
+    function nhan() {
+        let giatri1 = Number(document.getElementById("o1").value);
+        let giatri2 = Number(document.getElementById("o2").value);
+        let nhan = (giatri1 * giatri2);
+        document.getElementById("result").innerHTML += nhan;
+    }
+    function chia() {
+        let giatri1 = Number(document.getElementById("o1").value);
+        let giatri2 = Number(document.getElementById("o2").value);
+        let chia = (giatri1 / giatri2);
+        document.getElementById("result").innerHTML += chia;
+    }
+</script>
+
+</html>
