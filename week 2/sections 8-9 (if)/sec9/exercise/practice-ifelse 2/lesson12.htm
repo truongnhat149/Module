@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <label for="">số tiền muốn gửi tiết kiệm(đơn vị VNĐ)</label><br>
+        <input type="number" id="PV"><br>
+        <label for="">nhập số năm gửi</label><br>
+        <input type="number" id="n"><br>
+        <label for="">i là lãi suất hằng năm của gói</label><br>
+        <input type="number" id="i"><br>
+        <button onclick="tinh()">Result</button>
+    </body>
+    <script>
+        function tinh() {
+            let PV = Number(document.getElementById('PV').value);
+            let n = Number(document.getElementById('n').value);
+            let i = Number(document.getElementById('i').value);
+            FV = PV * (1+i/100)^n;
+            document.write('Số tiền lúc đó là  ' + FV);
+        }
+    </script>
+</html>

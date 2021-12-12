@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <fieldset>
+        <legend>Thue TNCN</legend>
+        <label for="">Nhập số thu nhập hàng tháng (đơn vị triệuVNĐ)</label><br>
+        <input type="number" id="TTN">
+        <p id="result"></p>
+        <button onclick="tinhthue()">result</button>
+    </fieldset>
+</body>
+<script>
+    function tinhthue() {
+        let thue = Number(document.getElementById('TTN').value);
+        switch (true) {
+            case thue == 5:
+                alert('thue suat la 5%');
+                break;
+            case thue > 5 && thue == 10:
+                alert('thue suat la 10%');
+                break;
+            case (thue > 10 && thue == 18):
+                alert('thue suat la 15%');
+                break;
+            case (thue > 18 && thue == 32):
+                alert('thue suat la 20%');
+                break;
+            case (thue > 32 && thue == 52):
+                alert('thue suat la 25%');
+                break;
+            case thue > 52 && thue == 80:
+                alert('thue suat la 30%');
+                break;
+            case thue > 80 :
+                alert('thue suat la 35%');
+                break;
+        }
+    }
+</script>
+
+</html>
