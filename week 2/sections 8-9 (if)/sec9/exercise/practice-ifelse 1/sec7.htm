@@ -1,0 +1,21 @@
+<html>  
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <h1>lesson7</h1>
+            <label for="SoPhut"></label>Nhập số phút gọi<input type="number" id="SoPhut">
+            <label for="TienCuoc"></label>Nhập tiền cước 1 phút<input type="number" id="TienCuoc">
+            <button onclick="tinh()">Tính tiền cước</button>
+    
+        </div>
+    </body>
+<script>
+    function tinh() {
+            sophut = Number(document.getElementById("SoPhut").value);
+            tiencuoc = Number(document.getElementById("TienCuoc").value);
+            alert("Tiền cước điện thoại là "+ sophut*tiencuoc + 'VND'); 
+    }
+</script>
+</html>

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>tong ket</title>
+</head>
+
+<body>
+    <label name="nhapdiem">
+        <input type="number" id="diemktra" max="10">
+        <input type="number" id="diemthi" max="10">
+        <input type="number" id="diemcuoiki" max="10">
+        <button onclick="tongket()">Result</button>
+    </label>
+</body>
+<script>
+    function tongket() {
+        let diemKT = Number(document.getElementById('diemktra').value);
+        let diemthi = Number(document.getElementById('diemthi').value);
+        let diemcuoiki = Number(document.getElementById('diemcuoiki').value);
+        tongdiem = (diemKT + (diemthi * 2) + (diemcuoiki * 3)) / 6;
+        
+    
+    switch (true) {
+        case tongdiem >= 9:
+            document.write('hoc sinh XS' + tongdiem)
+            break;
+        case tongdiem >= 8:
+            document.write('hoc sinh gioi' + tongdiem)
+            break;
+        case tongdiem >= 6.5:
+            document.write('hoc sinh kha' + tongdiem)
+            break;
+        case tongdiem >= 5:
+            document.write('hoc sinh TB' + tongdiem)
+            break;
+        default :
+            document.write('Hoc sinh yeu' + tongdiem)
+            break;
+    }
+}
+</script>
+
+</html>

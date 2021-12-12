@@ -1,0 +1,18 @@
+<html>
+
+<head></head>
+
+<body>
+    <label for="meter">nhap met</label><br>
+    <input type="number" id="inmeter">
+    <button onclick="chuyendoi()">chuyen doi</button>
+</body>
+<script>
+    function chuyendoi() {
+        var met = Number(document.getElementById('inmeter').value);
+        ft = met * 3.2808;
+        document.write('feet la ' + ft);
+    }
+</script>
+
+</html>

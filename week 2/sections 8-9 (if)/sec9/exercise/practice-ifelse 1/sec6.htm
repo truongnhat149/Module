@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <div>
+            <h1>Bài 6</h1>
+            <label for="DoanhThu">Nhập doanh thu</label><input type="number" id="DoanhThu">
+            <label for="HoaHong">Nhập tỷ lệ hoa hồng theo %</label><input type="number" max="100" id="HoaHong">
+            <button onclick="Bai6()">Tính hoa hồng</button>
+        </div>
+    </body>
+<script>
+    function Bai6() {
+            doanhthu = Number(document.getElementById("DoanhThu").value);
+            hoahong = Number(document.getElementById("HoaHong").value);
+            alert("Hoa hồng là " + parseFloat(doanhthu*hoahong/100).toFixed(2));
+        }
+</script>
+
+</html>

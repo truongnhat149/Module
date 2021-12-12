@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <title> Luyen tap cau truc dieu kien 2</title>
+</head>
+
+<body>
+    <div>
+        <!-- tinh dien tich hinh chu nhat -->
+        <h1>bai 4</h1>
+        <label for="canhA">canh A</label><br>
+        <input type="number" id="canhA"><br>
+        <label for="canhB">canh B</label> <br>
+        <input type="number" id="canhB"><br>
+        <button onclick="tinhSHCN()">show result</button>
+    </div>
+    <div>
+        <!-- tinh dien tich tam giac vuong -->
+        <h1>bai 5</h1>
+        <label for="canha">canh A</label><br>
+        <input type="number" id="canha1"><br>
+        <label for="canhb">canh B</label> <br>
+        <input type="number" id="canhb1"><br>
+        <button onclick="tinhSTGV()">show result</button>
+    </div>
+    <div>
+        <!-- giai phuong trinh bac nhat ax + b = 0-->
+        <h1>bai 6</h1>
+        <label for="">nhap gia tri 1</label><br>
+        <input type="" id="value1"><br>
+        <label for="">nhap gia tri 2</label> <br>
+        <input type="" id="value2"><br>
+        <button onclick="PTB1()">show result</button>
+    </div>
+    <div>
+        <!-- giai phuong trinh bac hai ax2 + bx + c = 0 -->
+        <h1>bai 7</h1>
+        <label for="">nhap gia tri a</label><br>
+        <input type="" id="valueb21"><br>
+        <label for="">nhap gia tri b</label> <br>
+        <input type="" id="valueb22"><br>
+        <label for="">nhap gia tri c</label> <br>
+        <input type="" id="valueb23"><br>
+        <button onclick="PTB2()">show result</button>
+    </div>
+    <div>
+        <!-- kiem tra mot so nhap vao co phai la tuoi? -->
+        <h1>bai 8</h1>
+        <label for="">nhap mot so bat ki</label><br>
+        <input type="number" id="numberrd"><br>
+        <button onclick="ktra()">show result</button>
+    </div>
+    <div>
+        <!-- ktra xem 3 so thuc co phai canh cua 1 tam giac -->
+        <h1>bai 9</h1>
+        <label for="">nhap gia tri canh a</label><br>
+        <input type="" id="canh1"><br>
+        <label for="">nhap gia tri canh b</label> <br>
+        <input type="" id="canh2"><br>
+        <label for="">nhap gia tri canh c</label> <br>
+        <input type="" id="canh3"><br>
+        <button onclick="tamgiac()">show result</button>
+    </div>
+    <div>
+        <!-- tinh gia dien -->
+        <h1>bai 10</h1>
+        <label for="">nhap san luong tieu thu(kWh)</label><br>
+        <input type="number" id="Mqi"><br>
+        <label for="">so ngay cua thang truoc lien ke</label><br>
+        <input type="number" id="T"><br>
+        <label for="">so ngay tinh tien</label><br>
+        <input type="number" id="N"><br>
+        <button onclick="mucbacthang()">Tinh tien</button>
+    </div>
+    <script>
+        function tinhSHCN() {
+            let a = Number(document.getElementById('canhA').value);
+            let b = Number(document.getElementById('canhB').value);
+            S = a * b;
+            document.write('dien tich HCN ' + S);
+        }
+        function tinhSTGV() {
+
+            let a1 = Number(document.getElementById('canha1').value);
+            let b1 = Number(document.getElementById('canhb1').value);
+            STGV = a1 * b1 / 2;
+            document.write('dien tich TGV ' + STGV);
+        }
+        function PTB1() {
+            let var1 = Number(document.getElementById('value1').value);
+            let var2 = Number(document.getElementById('value2').value);
+            PTB1 = -var2 / var1;
+            document.write('nghiem phuong trinh ' + parseFloat(PTB1).toFixed(2));
+        }
+        function PTB2() {
+            let valueb21 = Number(document.getElementById('valueb21').value);
+            let valueb22 = Number(document.getElementById('valueb22').value);
+            let valueb23 = Number(document.getElementById('valueb23').value);
+            delta = (valueb22) ** 2 - (4 * valueb21 * valueb23);
+
+            switch (true) {
+                case delta > 0:
+                    document.write('phuong trinh co hai nghiem phan biet ' + 'nghiem 1 la' + parseFloat((-valueb22 + Math.sqrt(delta)) / 2 * valueb21).toFixed(2) + '  nghiem 2 la' + parseFloat((-valueb22 - Math.sqrt(delta)) / 2 * valueb21)).toFixed(2);
+                    break;
+                case delta < 0:
+                    document.write('phuong trinh vo nghiem');
+
+                    break;
+                default:
+                    document.write('phuong trinh co nghiem kep la x1 = x2 = ' + (-valueb22) / 2 * valueb21)
+
+                    break;
+            }
+        }
+        function ktra() {
+            let rd = Number(document.getElementById('numberrd').value);
+            document.write((rd < 120) && (rd > 0) ? 'do la tuoi cua mot nguoi' : 'day khong phai tuoi cua mot nguoi')
+        }
+        function tamgiac() {
+            document.write(canh1 > 0 && canh2 > 0 && canh3 > 0 && (canh1 + canh2 > canh3) && (canh2 + canh3 > canh1) && (canh1 + canh3 > canh2) ? 'day la cac canh cua tam giac' : 'day khong phai la cac canh cua tam giac' );
+        }
+        /*
+        * Mti: Mức bậc thang tiền điện của hộ gia đình (kWh).
+
+        Mqi: Mức bậc thang thứ i theo quy định (kWh).
+
+        T: Số ngày của tháng trước liền kề (ngày).
+
+        N: Số ngày tính tiền (ngày).
+        Mti = (Mqi / T) * N
+        truong hợp này giả sư 1kWh = 1000 vnd
+        */
+        function mucbacthang() {
+            let Mqi = Number(document.getElementById('Mqi').value);
+            let T = Number(document.getElementById('T').value);
+            let N = Number(document.getElementById('N').value);
+            Mti = (Mqi / T) * N;
+            document.write('so tien thang nay ban phai dong la (don gia da co them VAT 10%) ' + parseFloat(Mti*1000 + 10/100).toFixed(2) + ' VND ' );
+        }
+    </script>
+</body>
+
+</html>

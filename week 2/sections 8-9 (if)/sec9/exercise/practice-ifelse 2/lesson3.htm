@@ -1,0 +1,15 @@
+<html>
+    <head></head>
+    <body>
+        <label for="canhA">Nhap canh A</label><br>
+        <input type="number" id="canha"><br>
+        <button onclick="vlua()">Show Result</button>
+    </body>
+<script>
+ function vlua() {
+     let a = Number(document.getElementById('canha').value);
+     HV = a ** 2;
+     document.write('dien tich HV la ' + HV);
+ }
+</script>
+</html>

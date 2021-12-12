@@ -1,0 +1,18 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <label >nhap do C</label><br>
+        <input type="number" id="doC">
+        <button onclick="chuyendoi()">ChuyenDoi</button>
+    </body>
+    <script>
+      
+        function chuyendoi() {
+            var doC = Number(document.getElementById('doC').value);   
+             doF = (doC * 9/5)+ 32;
+            document.write(doF + 'do F');
+        }
+    </script>
+</html>
