@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>TU DIEN</title>
+</head>
+
+<body>
+    <p id="TiengViet"></p>
+    <h1> Ứng dụng từ điển </h1>
+    <form name="TuDien">
+        <p> Nhập từ tiếng Anh: </p>
+        <input type="text" name="TiengAnh"> <br>
+        <input type="button" value="Translate to Vietnamese" onclick="TraTu()">
+        <p id="TiengViet">
+    </form>
+   
+    </p>
+    <script>
+        let Anh = ['CAT', 'DOG', 'MOUSE', 'HORSE'];
+        let Viet = ['Mèo', 'Chó', 'Chuột', 'Ngựa'];
+
+        function TraTu() {
+            Tu = document.forms["TuDien"]["TiengAnh"].value;
+            vt = Anh.indexOf(Tu.toUpperCase());
+            if (vt != -1) {
+                document.getElementById("TiengViet").innerHTML = Viet[vt];
+            } else {
+                document.getElementById("TiengViet").innerHTML = "Không tìm thấy";
+            }
+        }
+        // let mangEnglish = ['Fruit','Orange','Car','House',
+
+        // 'Computer','desk','chair','battery','left','right']
+        // let mangTiengViet = ['trái cây','cam','xe hơi',
+        // 'ghế','máy tính','bên trái','bên phải','pin']
+
+        // function TraTu() {
+        //     Tu = document.forms['TuDien']['tiengAnh'].value;
+        //     vt = mangEnglish.indexOf(Tu.toUpperCase());
+        //     if (vt != -1) {
+        //         document.getElementById('TiengViet').innerHTML =
+        //          mangTiengViet[vt];
+        //     } else {
+        //         document.getElementById('TiengViet').innerHTML = 'not found'
+        //     }
+        // }
+    </script>
+
+</html>

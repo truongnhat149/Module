@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai 4</title>
+</head>
+
+<body>
+    <p><b>Bài 4:</b> Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</p>
+    <h1 id="result" style="text-align: center"> </h1>
+    <script>
+        const number = parseInt(prompt('enter number'))
+        let n1 = 0,
+            n2 = 1,
+            nextNumber;
+    
+        nextNumber = n1 + n2;
+
+        while (nextNumber <= number) {
+           
+            n1 = n2;
+            n2 = nextNumber;
+            nextNumber = n1 + n2;
+            if (nextNumber %5 == 0) {
+                document.write(`Fibonaci chia het cho 5`);
+            } else {
+                document.write(`Trong day kh co so chia het cho 5`)
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

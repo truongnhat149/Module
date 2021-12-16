@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        // let number = [1,2,3,10,4,-1,-3,0,9,8,7];
+        // let max = number[0];
+        // let index = 0;
+        // for (let i = 1;i < number.length;i++) {
+        //     if (number[i] > max) {
+        //         max = number[i];
+        //         index = i;
+        //     }
+        // }
+        // document.write('max' + max + 'at position' + index);
+        let number = [0,1,2,3,4,-2,-4,-5,-9,10,111]
+        let max = number[0];
+        let index = 0;
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] > max) {
+                max = number[i];
+                index = i;
+            }
+        }
+        document.write('gia tri lon nhat trong mang ' +
+         max + 'at position ' + index)
+    </script>
+</html>

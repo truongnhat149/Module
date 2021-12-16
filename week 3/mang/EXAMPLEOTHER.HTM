@@ -1,0 +1,56 @@
+<HTML>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <p>1.tạo ra 1 mảng có n phần tử và các giá trị của mảng đó
+        được sinh từ 10 đến 90 <br>
+        2. hiển thị mảng đó ra màn hình <br>
+        3.tính tổng các giá trị có trong mảng <br>
+        4.tạo ra 1 mảng mới màtất cả các giá trị trong mảng
+        nhân 2 <br>
+        5. tạo ra biến x, gán cho nó giá trị, kiểm tra xem
+        nó có nằm trong mảng đó kh? </p>
+
+</body>
+<script>
+    // tao 1 mang
+    // bai 1
+    let mang = [];
+        sum = 0;
+    let mang2 = [];
+    for (let i = 1; i <= 10; i++) {
+        mang.push(Math.floor((Math.random() * 91) + 10));
+    }
+    document.write('1.2.Mảng có các phần tử ' + mang + '<br/>');
+
+    //bai3
+    for (let number of mang) {
+        sum += number
+    }
+    document.write(`tong cua mang  ${sum} <br>` )
+
+    //bai 4
+
+    for (let tich in mang) {
+        mang2.push(mang[tich]* 2)
+    }
+    document.write('mang moi co gia tri ' + mang2 + '<br>')
+    
+    //bai 5
+    let number = Number(prompt('enter here'));
+     vt = mang.indexOf(number);
+    if ( vt != -1 ) {
+        document.write(`so ban vua nhap la ${number} no nam trong
+        mang `)
+    } else {
+        document.write(`so ban vua nhap la ${number} no khong
+        nam trong mang`)
+    }
+
+
+</script>
+
+</HTML>

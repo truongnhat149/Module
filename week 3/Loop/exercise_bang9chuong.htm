@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>bang cuu chuong</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // sou = '<table border="1" width="300" cellspacing="0" cellspacing="3"> '
+    // for (let i = 2, n = 1; i <= 9; i++) {
+    //     sou = sou + '<tr>' + '2*n' + '</tr>'
+
+    //     for (let j = 1; j <= 8; j++) {
+    //         sou = sou + '<td>' + i*j + '</td>'
+    //             }
+    // } sou = '<table'>
+
+    // document.write(sou)
+    // document.write("<table border=1 width=100%>")
+    // for (i = 1; i <= 9; i++) {
+    //     document.write("<tr>")
+    //     for (n = 2; n <= 9; n++)
+    //         document.write("<td>" + n + "x" + i + "=" + (n * i));
+    //     document.write("</td>");
+    //     document.write("</tr>")
+    // }
+    // document.write("</tr></table>")
+
+document.write('<table border=1 width=100%>')
+    for (let i = 2; i <= 9; i++) {
+        document.write('<tr>')
+            for ( let n = 1; n <= 9 ; n++ ) {
+                document.write('<td>' + i + 'x' + n + '=' + (i*n))
+            }
+    } document.write('</td>')
+    document.write('</table>')
+</script>
+
+</html>
