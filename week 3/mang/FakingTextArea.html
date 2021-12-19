@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Faking Text game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Type anything slowly</h1>
+        <textarea name="FakingText" id="FakingTyping" cols="50" rows="10" onkeydown="inputText()" onfocus="this.value=''"></textarea>
+    </div>
+    <script>
+        let textinput = document.getElementById("FakingTyping");
+        let str = "CodeGym.vn Hue 2021年　12月　19日";
+        let n = 1;
+        function inputText() {
+            console.log("Hello");
+            textinput.value = str.substr(0,n);
+            ++n;
+        }
+    </script>
+</body>
+</html>
