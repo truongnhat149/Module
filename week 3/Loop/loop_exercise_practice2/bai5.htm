@@ -30,7 +30,7 @@
             if (isNaN(a)||isNaN(r)||isNaN(n)) {
                 res.innerHTML = " input  must be a number "
             }  else {
-                result = a*(Math.pow((1+r),n));
+                result = a*(1+r/100*n);
                 res.innerHTML = result;
             }
         }
