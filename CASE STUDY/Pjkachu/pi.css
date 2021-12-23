@@ -1,0 +1,82 @@
+html {
+    background-image: url(images/DJ-Mie-1.png) ;
+    background-repeat: none
+    ;
+}
+div {
+    align-items: center;
+}
+
+div #timebar {
+    width:20px;
+    background-color:#e64545"
+}
+
+.music {
+    background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button {
+    background-color: #58257b;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+.styleCharacter {
+    color: #FFFF00;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+.style3 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FF0000;
+}
+
+.style4 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.style6 {
+    color: #33CC99
+}
+
+.style8 {
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.style10 {
+    font-family: "Courier New", Courier, monospace;
+    color: #FFFFFF;
+}
+
+.style11 {
+    color: rgb(55, 43, 235);
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    font-display: unset;
+}
+
+
+

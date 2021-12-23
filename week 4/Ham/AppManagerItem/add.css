@@ -1,0 +1,74 @@
+table thead {
+    background-color: #eff5ef;
+    width: 200%;
+    padding: 50px;
+    border: green;
+    margin: 30px;
+    border-style: none ;
+    border-spacing: 20;
+    padding-bottom: 50px ;
+}
+
+
+
+.Add {
+    background-color: #0caf14;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'BenchNine', Arial, sans-serif;
+    font-size: 1em;
+    font-size: 22px;
+    line-height: 1em;
+    margin: 15px 40px;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.Add:before,
+.Add:after {
+    border-color: transparent;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    border-style: solid;
+    border-width: 0;
+    content: "";
+    height: 24px;
+    position: absolute;
+    width: 24px;
+}
+
+.Add::after {
+    border-color: #25910f;
+    border-top-width: 2px;
+    left: 0px;
+    top: -5px;
+}
+
+.Add:after {
+    border-bottom-width: 2px;
+    border-color: #289b0b;
+    bottom: -5px;
+    right: 0px;
+}
+
+.Add:hover,
+.Add.hover {
+    background-color: #1bb134;
+}
+
+.Add:hover:before,
+.Add.hover.before,
+.Add:hover:after,
+.Add.hover.after {
+    height: 100%;
+    width: 100%;
+}
+
+#NewProduct {
+    background-color: rgb(245, 245, 245);
+}

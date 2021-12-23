@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+	
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Pikachu</title>
+	<link rel="stylesheet" href="pi.css">
+	
+</head>
+
+
+<body>
+	<audio src="audio/alone.mp3" autoplay loop>
+    
+	</audio>
+	<div id="loading" class="style11" >Loading Game...</div>
+	<table cellspacing="0" cellpadding="0" ;>
+		<tr>
+			<td width="200">
+				<div align="left">
+				<center>
+				<span class="styleCharacter">Pikachu<br/>
+				</span>
+				</center>
+				
+				</div>
+				<p class="style3">&nbsp;</p>
+				<p class="style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style10">Level
+				<span id="level"></span></span><br />&nbsp;&nbsp;<br /><br />&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;Blood:&nbsp;
+					<span id="blood"></span> <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="style6">Score:&nbsp;<span id="score"></span> </span>
+					
+				</p>
+
+				<div align="center"><br /><br />
+					<button class="music" name="Button"  value="Re-play" onclick="el.createBigGame()">Re-play</button>
+					
+					<button class="music" value="music" onclick="">Music</button>
+				</div>
+				<p>&nbsp;</p>
+				<p align="center"></p>
+			</td>
+			<td valign="bottom">
+
+				<div id="timebar"></div>
+			</td>
+
+			<td id="board"></td>
+		</tr>
+	</table>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/ImagePreloader.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/settime.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/Piece.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/Board.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/Algorithms.js"></script>
+	<script language="JavaScript" type="text/javascript">
+		var el;
+
+		function loadedAll() {
+			document.body.removeChild(document.getElementById("loading"));
+			el = newBoard();
+			el.createBigGame();
+			document.getElementById("board").appendChild(el);
+			document.getElementById("maintable").style.visibility = "visible";
+
+		}
+
+		function loadImage() {
+			var list = new Array;
+			list.push("avatar.jpg");
+			var i;
+			for (i = 0; i < 7; i++) list.push("images/bgr" + i + ".jpg");
+			for (i = 1; i <= 36; i++) list.push("images/pieces" + i + ".png");
+			var t = new ImagePreloader(list, loadedAll);
+		}
+		loadImage();
+	</script>
+</body>
+
+</html>
