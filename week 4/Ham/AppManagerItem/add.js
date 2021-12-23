@@ -1,24 +1,46 @@
-var ItemShop = new Array('Nokia','SamSung','LG','Lenovo','Iphone')
-var tbody = '';
 
+let listProduct = ['ip12', 'nokia 10', 's10', 'ip13xx max', 'nokia 1280'];
 
-tbody += `<tr>`;
+displayAll();
+// hàm thêm sp
+function displayAll() {
+    let str =  '<tr>\n' +
+        '<td>Product Name</td>\n  ' +
+        '<td></td>\n' +
+        '<td>' + listProduct.length + 'product</td> ' +
+    '</tr>';
+    
+    for (let i = 0; i < listProduct.length; i++) {
+        str += '<tr><td>' + listProduct[i] + '</td>' +
+        '<td><button onclick="showFormEdit(' + i + ')">Edit</button></td>' +
+        '<td><button onclick="deleteProduct(' + i + ')">Delete</button></td></tr>'
+    }
+    
+    document.getElementById('displayArea').innerHTML = str;
 
-tbody += `</tr>`;
-
-function showItem(){
-    alert()
 }
 
-function AddItem() {
-    alert()
+function addProduct() {
+    let productName = document.getElementById('add').value;
+    document.getElementById('add').value = '';
+    listProduct.push(productName);
+    console.log(listProduct)
+    displayAll();
 }
 
-
-function editItem() {
-    alert();
+function deleteProduct(inDex) {
+   listProduct.splice(inDex, 1);
+   displayAll();
 }
 
-function deleteItem() {
-    alert();
+function showFormEdit(inDex) {
+    let  str = '' ;
+    str = '<input type="text" value=" '+ listProduct[inDex] +' " id="editProduct"><button onclick="saveProduct(' + inDex + ')">Save</button>';
+    document.getElementById('edit').innerHTML = str;
+}
+
+function saveProduct(inDex) {
+    listProduct[inDex] = document.getElementById('editProduct').value;
+    document.getElementById('edit').innerHTML = '';
+    displayAll();
 }
