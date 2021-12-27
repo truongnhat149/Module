@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+</head>
+<body>
+    <label for="">Enter Temperature </label><br>
+    <input type="text" value="" onfocus="this.value" id="Temperature" min="-273">Temperature<br>
+    <button onclick="transitionF()">transition F</button>
+    <button onclick="transitionKenvin()">transition Kenvin</button>
+
+    <div>
+        <p id="showTransitionF"></p>
+        <p id="showTransitionKenvin"></p>
+    </div>
+</body>
+<script src="js/temperature.js"></script>
+</html>

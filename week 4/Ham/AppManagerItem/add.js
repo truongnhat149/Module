@@ -2,7 +2,7 @@
 let listProduct = ['ip12', 'nokia 10', 's10', 'ip13xx max', 'nokia 1280'];
 
 displayAll();
-// hàm thêm sp
+
 function displayAll() {
     let str =  '<tr>\n' +
         '<td>Product Name</td>\n  ' +
@@ -12,8 +12,8 @@ function displayAll() {
     
     for (let i = 0; i < listProduct.length; i++) {
         str += '<tr><td>' + listProduct[i] + '</td>' +
-        '<td><button onclick="showFormEdit(' + i + ')">Edit</button></td>' +
-        '<td><button onclick="deleteProduct(' + i + ')">Delete</button></td></tr>'
+        '<td><button onclick="showFormEdit('+ i +')">Edit</button></td>' +
+        '<td><button onclick="deleteProduct('+ i +')">Delete</button></td></tr>'
     }
     
     document.getElementById('displayArea').innerHTML = str;
