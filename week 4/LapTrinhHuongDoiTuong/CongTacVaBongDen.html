@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COng tac va bong den</title>
+</head>
+<body>
+    <script>
+        let SwitchButton = function () {
+            this.status = false;
+            this.connectToLamp = function(lamp) {{
+                this.lamp = lamp;
+
+            }}
+            this.switchOff = function() {
+                this.status = false;
+                this.lamp.turnOff();
+            }
+            this.switchOn = function() {
+                this.status = true;
+                this.lamp.turnOn();
+            }
+        }
+
+        let ElectricLamp = function() {
+            this.status = false;
+            this.turnOn = function() {
+                this.status = true;
+
+            }
+            this.turnOff = function() {
+                this.status = false;
+            }
+        }
+
+        let switchbutton = new SwitchButton();
+        let lamp = new ElectricLamp();
+        switchbutton.connectToLamp(lamp);
+        for (let i = 0; i < 5; i++) {
+            switchbutton.switchOn();
+            console.log(lamp.status);
+            switchbutton.switchOff();
+            console.log(lamp.status);
+        }
+    </script>
+</body>
+</html>

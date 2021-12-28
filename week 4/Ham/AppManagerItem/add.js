@@ -44,3 +44,4 @@ function saveProduct(inDex) {
     document.getElementById('edit').innerHTML = '';
     displayAll();
 }
+
