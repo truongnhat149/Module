@@ -1,31 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array</title>
     <style>
-         .runPro {
+        .runPro {
             background-color: aqua;
-            
+
             position: relative;
-            
+
         }
+
         html {
             background-color: #ccc;
         }
     </style>
 </head>
+
 <body>
-    <label for="" id=""> type min</label><br>
-    <input type="number" id="min"> <br>
-    <label for="" id=""> type max</label><br>
-    <input type="number" id="max"> <br>
-    <label for=""> size Array</label><br>
-    <input type="number" id="size"> <br>
-    <button onclick="createArray()" class="runPro">run</button>
-    <p id="showLesson1"></p>
+    <div class="typeArray">
+        <label for="" id=""> type min</label><br>
+        <input type="number" id="min"> <br>
+        <label for="" id=""> type max</label><br>
+        <input type="number" id="max"> <br>
+        <label for=""> size Array</label><br>
+        <input type="number" id="size"> <br>
+        <button onclick="createArray()" class="runPro">run</button>
+        <p id="showLesson1"></p>
+    </div>
+    <div>
+        <button onclick="lesson1()">Lesson 1</button>
+        <p id="lessonNumberInteger"></p>
+    </div>
+    <div>
+        <button onclick="lesson2()">Lesson 2</button>
+        <p id="maxNumber"></p>
+    </div>
+    <div>
+        <button onclick="lesson3()">Lesson 3</button>
+        <p id="maxAvg"></p>
+    </div>
+    <div>
+        <button onclick="lesson4()">Lesson 4 </button>
+        <p id="sortArr"></p>
+    </div>
+    <div>
+        <button onclick="lesson5()">Lesson 5 </button>
+        <p id="negativeInteger"></p>
+    </div>
+    <div>
+        <button onclick="lesson6()">Lesson 6 </button>
+        <input type="text" id="numberInter" value="">Type number<br>
+        <p id="findInteger"></p><br>
+    </div>
+    <div>
+        <button onclick="lesson7()">Lesson 7 </button>
+        <input type="text" id="findNum" value="">Type number<br>
+        <p id="findNumber"></p>
+    </div>
+    <div>
+        <button onclick="lesson8()">Lesson 8 </button>
+        <p id="sortArrAZ"></p>
+    </div>
+    <div>
+        <!-- onclick="lesson9()" -->
+        <button id="show" >Lesson 9 </button>
+        <p id="showArray"></p>
+        <div class="showArray-1">
+            <p class="showArr"></p>
+            <p class="showArr2"></p>
+            <p class="showArr3"></p>
+        </div>
+    </div>
 </body>
 <script src="mang.js"></script>
+
 </html>
