@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>   
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+        }
+        canvas {
+            display: block;
+           /* border: 2px solid black; */
+            margin: 0;
+            border: 0;
+            background-image: url("universe.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+             /* no-repeat center center fixed; */
+        }
+        img {
+            display: none;
+        }
+        </style>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+    <img src="assets/img/ufo.png" id="BattleShip">
+    <img src="assets/img/explosion.png" id="Explosion">
+    <img src="assets/img/planet1.png" id="Planet1">
+    <img src="assets/img/planet2.png" id="Planet2">
+    <img src="assets/img/planet3.png" id="Planet3">
+    <img src="assets/img/planet4.png" id="Planet4">
+    <img src="assets/img/planet5.png" id="Planet5">
+    <img src="assets/img/planet6.png" id="Planet6">
+    <script src="assets/js/ship.js"></script>
+    <script src="assets/js/explosion.js"></script>
+    <script src="assets/js/ball.js"></script>
+    <script src="assets/js/bullet.js"></script>
+    <script src="assets/js/game.js"></script>
+</body>
+</html>
