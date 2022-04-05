@@ -1,4 +1,7 @@
 # 29/12/2021
+
+# Bộ câu hỏi phỏng vấn
+- link : https://rgl.mobi/vvNTB
 ## Kết thúc module 31/12/2021
 - Cám ơn Anh/Chị đã quan tâm đến phần làm bài tập của em. 
 Các anh/chị muốn tìm đến file cần tìm kiếm thì chỉ cần dò theo tuần và bài, em có để theo tiếng anh hoặc đôi lúc là tiếng việt, vì do em đang học tiếng anh, nên mong a/chị thông cảm cho em ;) <3
